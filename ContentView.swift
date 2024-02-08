@@ -84,6 +84,7 @@ struct ContentView: View {
             Button("Change durations") {
                 isActive = true
             }
+            .foregroundColor(Color("Light"))
             .sheet(isPresented: $isActive, onDismiss: didDismiss) {
                 CustomDialog(
                     timer: timer,
@@ -97,7 +98,6 @@ struct ContentView: View {
                     .presentationBackground(.thickMaterial)
             }
             .padding(.vertical)
-            .foregroundColor(Color("Light"))
             
         }
         .frame(maxWidth: .infinity, maxHeight: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
